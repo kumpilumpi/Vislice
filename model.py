@@ -26,56 +26,34 @@ class Igra:
 
         return [c for c in self.crke if c in self.geslo]
 
-
-
     def stevilo_napak(self):
 
         return len(self.napacne_crke())
 
-
-
     def zmaga(self):
 
         for crka in self.geslo:
-
             if crka not in self.crke:
-
                 return False
-
             else:
-
                 pass
-
         return True
-
-
 
     def poraz(self):
 
         return self.stevilo_napak() > STEVILO_DOVOLJENIH_NAPAK
 
-
-
     def pravilni_del_gesla(self):
 
         delni = ""
-
         for crka in self.geslo:
-
             if crka in self.crke:
-
                 delni += crka + ''
-
             else:
-
                 delni += '_ '
-
         return delni
 
-
-
     def nepravilni_ugibi(self):
-
         return ' '.join(self.napacne_crke())
 
 
@@ -83,33 +61,19 @@ class Igra:
     def ugibaj(self, crka):
 
         crka = crka.upper()
-
         if crka in self.crke:
-
             return PONOVLJENA_CRKA
-
         else:
-
             self.crke.append(crka)
-
         if crka in self.geslo:
-
             if self.zmaga():
-
                 return ZMAGA
-
             else:
-
                 return PRAVILNA_CRKA
-
         else:
-
             if self.poraz():
-
                 return PORAZ
-
             else: 
-
                 return NAPACNA_CRKA
 
 

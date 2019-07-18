@@ -11,7 +11,7 @@ geslo_uganjeno =[]
 
 def zacetno_geslo():
     '''Ustvari seznam dolžine gesla s samimi ničlami'''
-    for i in range(len(geslo)):
+    for _ in range(len(geslo)):
         geslo_uganjeno.append(0)
     return geslo_uganjeno
 
